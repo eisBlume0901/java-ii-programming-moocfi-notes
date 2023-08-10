@@ -1,0 +1,11 @@
+When inheriting, the subclass receives the functionality of the superclass.
+- all the methods and interfaces from the superclass
+- keep the inheritance hierarchy shallow since maintaining and further developing hierarchy becomes
+more difficulty as it grows larger (improve the structure of the program if the inheritance hierarchy
+is more than 2 or 3 levels deep)
+
+When not to use inheritance?
+- If an object owns or is composed of other objects
+- Ensure that the Single Responsibility Principle holds true
+  - if you notice that inheriting adds more responsibilities to a class, you should form multiple
+  classes of class

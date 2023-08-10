@@ -1,0 +1,12 @@
+Feature	                extends	                    implements
+
+Inheritance	            Inherits from a class	    Implements an interface
+
+Properties	            Inherits all properties     Does not inherit properties
+                        from the superclass
+
+Methods	                Can add its own methods	    Must provide implementations for all methods
+                                                    in the interface
+
+Can be instantiated	    Yes	                        No
+

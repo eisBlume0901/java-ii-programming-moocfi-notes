@@ -1,0 +1,31 @@
+| Aspect                  | Using Packages                                                      | Using "src" Folder Only                                       |
+|-------------------------|---------------------------------------------------------------------|---------------------------------------------------------------|
+| Logical Organization    | Classes are grouped into packages.                                  | No logical grouping; all classes in the same folder.          |
+| Namespace               | Packages provide a namespace to avoid naming conflicts.             | No namespace; potential for naming conflicts.                 |
+| Package Declaration     | Package declarations are used in Java source files.                 | No package declarations needed.                               |
+| Import Statements       | Import statements are used to bring classes from other packages.    | No import statements needed.                                  |
+| Class References        | Simple class names can be used due to import statements.            | Fully qualified class names must be used.                     |
+| Project Structure       | Package hierarchy mirrors folder hierarchy in the project.          | All classes placed directly in the "src" folder.              |
+| Readability & Modularity| Enhances code readability and modularity.                           | Reduced readability and modularity.                           |
+| Recommended Use         | Recommended for most Java projects.                                 | Suitable for small, simple projects or learning exercises.    |
+| Project Scaling         | Scales well for larger projects and collaborative development.      | Becomes less manageable as the project grows.                 |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Features
+1. Namespace Management
+    - unique names within that package
+    - prevents naming conflicts and allow developers to use descriptive
+    and meaningful class names without worrying about clashes with classes from other packages
+2. Code organization
+    - group related classes and interfaces together based on functionality or purpose
+3. Access control (public, protected, private, package-private (default))
+    - helps enforce encapsulation and ensures that only intended classes can interact with certain
+    elements
+4. Import statements
+    - can use import statements to bring classes from other packages into the current file's scope
+    - can use simple class names instead of fully qualified names, which include the package name
+5. Encapsulation and Information Hiding
+    - packages support encapsulation allowing you to hide implementation details by declaring classes
+    and members with the appropriate access modifiers
+6. Code Re-usability
+    - can create libraries or modules within packages and reuse them across multiple projects

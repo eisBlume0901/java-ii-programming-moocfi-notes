@@ -1,0 +1,25 @@
+the equals method, so that all equal or approximately equal objects cause
+the comparison to return true and all false for all the rest
+
+public boolean equals - e
+
+the hashCode method, so that as few objects as possible end up with the same
+hash value
+
+public boolean equals - explicitly defined in a class to override the
+default implementation of.equals inherited from the Object class. A class
+can customize the way it compares itself to other objects.
+
+.equals - method that is already defined in the Object class and can be used
+by any Java class without having to define it explicitly.
+
+NOTE:
+When you override the equals() method, it is generally recommended to also override the
+hashCode() method to ensure consistency and maintaing contract between equality and hash code.
+
+The contract between equals() and hashCode() states that:
+1. If two objects are equal according to the equals() method, their hash codes must be equal
+2. If two objects have equal hash codes, it does not necessarily mean they are equal according to
+the equals() method.
+
+hashCode() implementation may vary depending on the specific requirements and properties of the class.

@@ -1,0 +1,12 @@
+Private
+- visible only to the internal methods of that class
+- subclasses will not see it, and a subclass has no direct means to access it
+- For example, Engine class have no direct access to the variables such as
+identifier, manufacturer, and description, which are defined in the superclass
+Part
+
+Public
+- subclass sees everything that is defined with the public modifier in the superclass
+
+Protected
+- some variables or methods that are visible to the subclasses but invisible to everything else

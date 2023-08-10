@@ -1,0 +1,18 @@
+Stream - can be formed from any object that implements the Collection Interface
+(e.g., ArrayList, HashSet, HashMap) with the stream() method
+
+Stream methods has two categories:
+1. Intermediate operations - transform or filter the elements of a stream, returning a
+new stream as a result (e.g., distinct(), filter(), mapToInt(), sorted())
+2. Terminal operations - produce a final result or side effect, consuming the elements
+of a stream (e.g., count(), collect(), forEach(), reduce())
+
+
+Lambda Expression - shorthand
+A lambda expression is a concise way to represent an
+anonymous function or behavior that can be passed around as a value.
+
+Anonymous function
+- does not need a named function declaration
+- use inline or as a parameter to other functions or methods
+- defined without a specific name

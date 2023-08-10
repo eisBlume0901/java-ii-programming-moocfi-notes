@@ -1,0 +1,24 @@
+putIfAbsent is a method in Java's Map interface that adds a new key-value pair
+to the map only if the key is not already present. If the key is already present,
+the method returns the existing value without modifying the map.
+The method signature is:
+
+V putIfAbsent(K key, V value)
+
+Here, key is the key to be added to the map and value is the corresponding value.
+If the key is already present in the map, the method returns the existing value
+associated with the key. Otherwise, the method adds the key-value pair to the map
+and returns null.
+
+Example:
+Map<String, Integer> map = new HashMap<>();
+
+Integer oldValue = map.putIfAbsent("apple", 1);
+if (oldValue != null)
+{
+    //key already present, do something with oldValue
+}
+else
+{
+    //key not present, new value added to map
+}

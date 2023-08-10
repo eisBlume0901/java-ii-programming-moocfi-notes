@@ -1,0 +1,40 @@
+Abstract class - serve as a blueprint or template that defines a set of methods and fields that must be
+    implemented by its subclasses.
+    - provide a common interface and behavior for its subclasses
+    - "Subclasses must provide an implementation for this method"
+
+------------------------------------------------------------------------------------------------------------------------
+Properties
+1. Cannot be instantiated but can be referenced by creating a new object
+2. Can contain constructors which can be inherited when extended by a subclass
+3. Can have an abstract class without any abstract method which can be inherited
+4. Can have final (methods that cannot be overridden) methods but the abstract
+class itself cannot be final
+5. Cannot have abstract class instantiation (inside abstract class then we
+instantiated)
+6. Can define static methods and can be called independently without any objects
+7. Can use abstract keyword for declaring top-level classes as well as
+inner classes as abstract
+8. Declare the class as abstract if there is at least one abstract method
+or else it would generate a compile-time error
+9. If the FirstChild class is unable to provide implementation to all declared
+abstract methods of the Parent abstract class, we should declare the FirstChild
+Class as abstract or else it would create an error prompting to fill up all the
+remaining unused abstract methods.
+------------------------------------------------------------------------------------------------------------------------
+
+Advantages of using abstract class:
+1. Abstraction - allows to define common methods and fields that can be inherited by multiple subclasses.
+    a. Code reuse
+    b. Consistent interface
+2. Polymorphism - can treat objects of different subclasses as objects of the abstract class type
+    a. Write code that operates on the abstract class without worrying about the specific implementation
+    in each classes
+3. Contractual obligation - enforces a contract ensuring that all subclasses provide the required
+    functionality.
+   a. Consistent behavior across different subclasses
+4. Flexibility - can have both abstract and non-abstract methods.
+   a. Can provide default implementations for some methods, while leaving others abstract for the
+   subclasses to implement.
+
+Keywords: Promotes code reuse, modularity, ability to treat objects of different subclasses uniformly

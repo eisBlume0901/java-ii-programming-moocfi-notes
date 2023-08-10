@@ -1,0 +1,9 @@
+Types of exceptions
+
+1. which must be handled
+   - handling files includes
+        IO Exception
+        FileNotFoundException
+2. which do not have to be handled
+        IllegalArgumentException
+        NullPointerException

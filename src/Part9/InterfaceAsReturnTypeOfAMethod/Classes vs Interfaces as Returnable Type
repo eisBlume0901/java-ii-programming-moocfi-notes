@@ -1,0 +1,22 @@
+Classes                 vs                  Interfaces
+- concrete                                  - abstract
+- have data members                         - does not have data members
+                                              (instance variables)
+- can only return its class                 - can return several classes
+- can have constructors                     - cannot have constructors
+
+For interfaces, we can return several different classes.
+This is because an interface is a contract that defines
+a set of methods that any class that implements the interface
+must provide. The specific implementation of those methods can
+vary from class to class.
+
+ADVANTAGE OF USING INTERFACE: Reducing the dependencies between classes
+
+Using interfaces in programming enables reducing dependencies between classes.
+In the previous example the Packer does not depend on the classes that implement
+ the Packable interface. Instead, it just depends on the interface. This makes
+ possible to add new classes that implement the interface without changing the
+ Packer class. What is more, adding new Packable classes doesn't affect the classes
+ that use the Packer class.
+

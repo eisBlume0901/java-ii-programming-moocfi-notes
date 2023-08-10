@@ -1,0 +1,44 @@
+Feature	                    Abstract Class	 Interface
+Can be instantiated	            No	            No
+Can have state	                Yes	            No
+Can extend other classes	    Yes	            No
+Can implement interfaces	    Yes	            Yes
+
+State - fields, properties, or variables
+Behavior - methods
+
+Example:
+
+class Car
+{
+    // State
+    private String color;
+    private String make;
+    private String model;
+
+    // Behavior
+    void drive();
+    void turn();
+    void brake();
+}
+
+Instantiation - means creating an object from a class. It is the process of
+    creating a new instance of a class. Abstract classes and interfaces
+    cannot be instantiated because they are not concrete.
+
+    Abstract class - cannot be instantiated because it does not have a
+    complete implementation
+
+    abstract class Shape
+    {
+        abstract void draw();
+        // does not have a body since it serves as an outline
+    }
+    Interface - special type of class that cannot have state
+
+    interface Drawable
+    {
+        void draw();
+        // does not have a body since it serves as an outline for the class.
+    }
+

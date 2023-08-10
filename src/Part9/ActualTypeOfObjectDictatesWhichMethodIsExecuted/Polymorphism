@@ -1,0 +1,9 @@
+Regardless of the type of the variable, the method
+that is executed is always chosen based on the actual type of
+the object.
+
+Objects are polymorphic, which means that they can be used via
+many different variable types.
+
+The executed method always relates to the actual type of the object.
+This phenomenon is called polymorphism

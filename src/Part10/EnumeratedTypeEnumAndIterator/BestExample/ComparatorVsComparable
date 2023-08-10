@@ -1,0 +1,7 @@
+	                    Comparable	                                                            Comparator
+Purpose	                Defines the natural ordering of a class	                                Provides customized ordering for a class
+Interface	            Implemented by the class being compared	                                Separate class or lambda expression
+Compare Method	        compareTo(Object o), returns negative, zero, or positive value	        compare(Object o1, Object o2), returns negative, zero, or positive value
+Single Sorting Rule	    Only one natural ordering per class	                                    Multiple custom ordering rules can be implemented
+Intrinsic Ordering	    Cannot change the natural ordering after implementation	                Flexibility to change the ordering based on needs
+Usage	                Automatically used by sorted collections like TreeSet or Arrays.sort()	Explicitly provided to sorting methods

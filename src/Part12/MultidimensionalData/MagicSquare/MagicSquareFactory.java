@@ -1,0 +1,65 @@
+package Part12.MultidimensionalData.MagicSquare;
+// https://www.javatpoint.com/magic-square-in-java
+public class MagicSquareFactory
+{
+    public MagicSquare createMagicSquare(int size)
+    {
+        MagicSquare square = new MagicSquare(size);
+        // implement the creation of a magic square with the Siamese method algorithm here
+        // Number 1 is at the location (size / 2, col - 1)
+        int row = size / 2;
+        int col = size - 1;
+
+        for (int no = 1; no <= size * size;)
+        {
+            /*
+            3rd Rule: If the computed position of the row is -1 and the computed position of the
+            column is equal to the size of the magic square, then the new position will be:
+            (0, size - 2)
+             */
+            if (row == -1 && col == size)
+            {
+                col = size - 2;
+                row = 0;
+            }
+            else
+            {
+                // Refer to 1st rule below
+                if (col == size)
+                    col = 0;
+                if (row < 0)
+                    row = size - 1;
+            }
+
+            /*
+            2nd rule: If at the computed position, a number is already present in the magic square, then
+            the computed position of the column is decreased by 2, and the computed position of the
+            row is increased by 1.
+             */
+            if (square.readValue(row, col) != 0)
+            {
+                col -= 2;
+                row += 1;
+                continue;
+            }
+            else
+            {
+                // Setting the number
+                square.placeValue(row, col, no);
+                no += 1; // The increment is placed here
+            }
+            col += 1;
+            row -= 1;
+            /*
+            1st Rule: At any position, the position of the next number is computed by decreasing
+            the row number of the previously filled number by 1 .
+
+             At any point of time, if the calculated position of the row becomes -1, then we will
+             wrap it around to size - 1. Similarly, if the calculated position of the column becomes
+             the size, then we will wrap it around to 0.
+             */
+        }
+        return square;
+    }
+}
+

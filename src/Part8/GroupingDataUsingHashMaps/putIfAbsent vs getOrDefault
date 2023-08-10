@@ -1,0 +1,7 @@
+putIfAbsent - adds a key-value pair to the map.
+If the key is already present in the map, then putIfAbsent returns
+the existing value associated with that key without modifying the map
+
+getOrDefault - returns the value to which the specified key is mapped,
+or a default value if the key is not present in the map
+

@@ -1,0 +1,53 @@
+import java.io.Serializable;
+
+public class Person implements Serializable {
+    private String name;
+    private int age;
+
+    // Constructor and other methods
+
+    // Serializable class
+}
+
+
+public class MyString implements CharSequence {
+    private String str;
+
+    public MyString(String str) {
+        this.str = str;
+    }
+
+    @Override
+    public int length() {
+        return str.length();
+    }
+
+    @Override
+    public char charAt(int index) {
+        return str.charAt(index);
+    }
+
+    @Override
+    public CharSequence subSequence(int start, int end) {
+        return str.subSequence(start, end);
+    }
+
+    @Override
+    public String toString() {
+        return str;
+    }
+}
+
+public class Person implements Comparable<Person> {
+    private String name;
+    private int age;
+
+    // Constructor and other methods
+
+    @Override
+    public int compareTo(Person other) {
+        // Compare based on age
+        return Integer.compare(this.age, other.age);
+    }
+}
+

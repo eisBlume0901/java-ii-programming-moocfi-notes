@@ -1,0 +1,8 @@
+Abstract class
+- combines interface and inheritance
+- cannot create instances of them but can only create instances of subclasses
+of abstract class
+- can include normal methods which have a method body, but it's also possible
+to define abstract methods that only contain the method definition
+(overridden through polymorphism)
+- Implementing the abstract methods is the responsibility of subclasses

@@ -1,0 +1,47 @@
+Object - highest in the hierarchy
+
+If we create a class, we can easily modify the following methods
+
+String toString()
+
+https://java-programming.mooc.fi/part-8/3-similarity-of-objects
+boolean equals()
+hashCode()
+
+public class Person {
+
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+
+        if (obj == this) {
+            return true;
+        }
+
+        if (obj instanceof Person) {
+            Person otherPerson = (Person) obj;
+
+            return this.name.equals(otherPerson.name) && this.age == otherPerson.age;
+        }
+
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 31 * hash + this.name.hashCode();
+        hash = 31 * hash + this.age;
+        return hash;
+    }
+}

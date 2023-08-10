@@ -1,0 +1,6 @@
+The package structure of the program could look like the following (for example):
+
+flightControl - includes the main program class that is needed to start the program
+flightControl.domain - includes the classes that represent concepts of the problem domain: Airplane, Flight, and Place
+flightControl.logic - includes the functionality that is used to control the application
+flightControl.ui - includes the textual user interface

@@ -1,0 +1,20 @@
+1. Interface Packable
+    a. double weight()
+2. Class Book Packable
+    a. weight() returns instance/class variable called weight too
+3. Class CD implements Packable
+    a. weight() returns constant value of 0.1
+4. Class Box implements Packable
+    a. weight() returns the total weight of all items
+    through for-loop of ArrayList<Packable> itemsInBox
+5. Class Factory
+   a. create a returnable interface Packable (In actuality,
+   it is class objects that was returned; however, we returned
+   different class objects)
+6. Class Packer
+   a. giveABoxOfThings() instantiate Box class and loops to
+   add the objects (book, cd, chocolate bar) to a box
+7. Class ChocolateBar
+   a. weight() returns a constant value of 0.2 which indicates that each
+   chocolate weighs 0.2
+

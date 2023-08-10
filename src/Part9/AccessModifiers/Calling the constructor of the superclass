@@ -1,0 +1,4 @@
+Super
+- call the constructor of the superclass
+- receives parameters the types of values that the superclass constructor
+requires

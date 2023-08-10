@@ -1,0 +1,22 @@
+get() - retrieve the value associated with a given key
+If the key is not present in the map, the get() method returns null
+
+getOrDefault() - retrieve the value associated with a given key OR
+default value if the key is not present in the map.
+- much flexible
+
+Map<String, Integer> myMap = new HashMap<>();
+myMap.put("one", 1);
+myMap.put("two", 2);
+
+// get value for existing key
+int value1 = myMap.get("one"); // returns 1
+
+// get value for non-existing key
+Integer value2 = myMap.get("three"); // returns null
+
+// get value for non-existing key with default value
+int value3 = myMap.getOrDefault("three", 0); // returns 0
+
+// get value for existing key with default value
+int value4 = myMap.getOrDefault("two", 0); // returns 2

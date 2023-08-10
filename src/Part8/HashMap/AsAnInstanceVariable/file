@@ -1,0 +1,107 @@
+package Part8.HashMap.AsAnInstanceVariable;
+
+import java.util.HashMap;
+
+class Manga {
+
+    private String name;
+    private String summary;
+    private int published;
+
+    public Manga(String name, int published, String summary)
+    {
+        this.name = name;
+        this.published = published;
+        this.summary = summary;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String content) {
+        this.summary = content;
+    }
+
+    public int getPublished() {
+        return published;
+    }
+
+    public void setPublished(int published) {
+        this.published = published;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + getName() + " (" + getPublished() + ") \n"
+                + "Summary: " + getSummary();
+    }
+}
+
+class CollectionOfMangas{
+    private HashMap<String, Manga> directory;
+
+    public CollectionOfMangas()
+    {
+        this.directory = new HashMap<>();
+    }
+
+    public void addManga(Manga manga)
+    {
+        String title = manga.getName();
+
+        if (title == null)
+        {
+            title = "";
+        }
+
+        String formatTitle = title.toLowerCase().trim();
+
+        if (this.directory.containsKey(formatTitle))
+        {
+            System.out.println("Book  is already in the library!");
+        }
+        else
+        {
+            directory.put(title, manga);
+        }
+    }
+
+    //Separate helper method as it does not handle object variables
+    public static String sanitizedString(String string)
+    {
+        if (string == null)
+        {
+            return "";
+        }
+        string = string.toLowerCase().trim();
+        return string;
+    }
+
+    public Manga getManga(String title)
+    {
+        title = sanitizedString(title);
+        return this.directory.get(title);
+    }
+
+    public void removeBook(String title)
+    {
+        title = sanitizedString(title);
+        if (this.directory.containsKey(title))
+        {
+            this.directory.remove(title);
+        }
+        else
+        {
+            System.out.println("Book was not found, cannot be removed!");
+        }
+    }
+}

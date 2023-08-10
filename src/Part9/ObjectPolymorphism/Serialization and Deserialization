@@ -1,0 +1,71 @@
+/*
+Serialization - converting an object into byte stream representation, typically for the purpose
+of storage or transmission.
+
+Deserialization - process of reconstructing an object from a byte stream. It involves reading the
+serialized data from a stream and restoring the object's state back to its original form.
+
+*/
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class SerializationExample {
+    public static void main(String[] args) {
+        // Create a list of objects to serialize
+        List<Person> persons = Arrays.asList(
+                new Person("John", 25),
+                new Person("Alice", 30),
+                new Person("Bob", 35)
+        );
+
+        // Serialize the objects
+        String serializedData = persons.stream()
+                .map(Person::serialize)
+                .collect(Collectors.joining(","));
+
+        System.out.println("Serialized Data: " + serializedData);
+
+        // Deserialize the objects
+        List<Person> deserializedPersons = Arrays.stream(serializedData.split(","))
+                .map(Person::deserialize)
+                .collect(Collectors.toList());
+
+        System.out.println("Deserialized Persons: " + deserializedPersons);
+
+        /* Sample Output
+        Serialized Data: John:25,Alice:30,Bob:35
+        Deserialized Persons: [Person{name='John', age=25}, Person{name='Alice', age=30}, Person{name='Bob', age=35}]
+
+        */
+    }
+}
+
+class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String serialize() {
+        return name + ":" + age;
+    }
+
+    public static Person deserialize(String serializedData) {
+        String[] parts = serializedData.split(":");
+        String name = parts[0];
+        int age = Integer.parseInt(parts[1]);
+        return new Person(name, age);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}

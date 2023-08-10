@@ -1,0 +1,37 @@
+Methods and constructors can throw exceptions.
+1. try-catch block
+
+public List<String> readLines(String fileName)
+{
+    List<String> lines = new ArrayList<>();
+    try
+    {
+        Files.lines(Paths.get("file.txt").forEach(line -> lines.add(line));
+    }
+    catch (FileNotFoundException e)
+    {
+        System.out.println("File not found");
+    }
+}
+2. throws ExceptionType
+
+public List<String> readLines(String fileName) throws Exception
+{
+    ArrayList<String> lines = new ArrayList<>();
+    Files.lines(Paths.get(fileName)).forEach(line -> lines.add(line));
+    return lines;
+}
+
+- the main method can throw an exception to the caller
+public class MainProgram
+{
+   public static void main(String[] args) throws Exception
+   {
+       // ...
+   }
+}
+
+IllegalArgumentException
+- best used when the values given to a method or constructor as
+parameters are wrong. It ensures that certain parameter values are
+right.

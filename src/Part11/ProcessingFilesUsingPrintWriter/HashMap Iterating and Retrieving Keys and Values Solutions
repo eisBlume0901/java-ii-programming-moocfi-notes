@@ -1,0 +1,45 @@
+    // Version 1
+    public String translate(String word)
+    {
+        String result = null;
+        for (Map.Entry<String, String> entry : this.dictionary.entrySet())
+        {
+            if (entry.getValue().equals(word))
+                result = entry.getKey();
+            if (entry.getKey().equals(word))
+                result = entry.getValue();
+        }
+        return result;
+
+    }
+
+    // Version 2
+
+    // But it will override so this is not good. Only applicable for finding either a keyset or valueset
+        result = this.dictionary
+                .entrySet()
+                .stream()
+                .filter(entry -> entry.getValue().equals(word))
+                .map(entry -> entry.getKey())
+                .findFirst()
+                .orElse(null);
+
+        result = this.dictionary
+                .entrySet()
+                .stream()
+                .filter(entry -> entry.getKey().equals(word))
+                .map(entry -> entry.getValue())
+                .findFirst()
+                .orElse(null);
+
+
+        // Version 3 has limitations and only for either keyset or valueset
+        String result = null;
+        Iterator <String> keySetIterator = this.dictionary.keySet().iterator();
+        while (!this.dictionary.isEmpty() && keySetIterator.hasNext())
+        {
+            String key = keySetIterator.next();
+            if (word.equals(key))
+                result = this.dictionary.get(key);
+        }
+        return result;
