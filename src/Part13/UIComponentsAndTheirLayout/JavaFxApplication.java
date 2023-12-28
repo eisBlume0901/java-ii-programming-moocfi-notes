@@ -17,36 +17,36 @@ public class JavaFxApplication extends Application
     @Override
     public void start(Stage stage) throws Exception
     {
-//        Label textComponent = new Label("Text element");
-//        Label textComponent1 = new Label();
-//        textComponent1.setText("Text Component");
-//        /*
-//        Label class allows to display text. It offers methods for modifying
-//        the text it contains.
-//        Methods:
-//        1. Constructor
-//        Label textComponent = new Label("Put your text inside");
-//        2. setText method
-//        Label textComponent1 = new Label();
-//        textComponent1.setText("Put your text inside");
-//         */
-//        FlowPane componentGroup = new FlowPane();
-//        componentGroup.getChildren().add(textComponent);
-//
-//        Scene view = new Scene(componentGroup);
-//
-//        stage.setScene(view);
-//        stage.show();
-
-        Label textComponent = new Label("Please click the button\n");
-        Button button = new Button("Click me!");
+        Label textComponent = new Label("Text element");
+        Label textComponent1 = new Label();
+        textComponent1.setText("Text Component");
+        /*
+        Label class allows to display text. It offers methods for modifying
+        the text it contains.
+        Methods:
+        1. Constructor
+        Label textComponent = new Label("Put your text inside");
+        2. setText method
+        Label textComponent1 = new Label();
+        textComponent1.setText("Put your text inside");
+         */
         FlowPane componentGroup = new FlowPane();
         componentGroup.getChildren().add(textComponent);
-        componentGroup.getChildren().add(button);
 
-        Scene scene = new Scene(componentGroup);
+        Scene view = new Scene(componentGroup);
 
-        stage.setScene(scene);
+        stage.setScene(view);
         stage.show();
+
+//        Label textComponent = new Label("Please click the button\n");
+//        Button button = new Button("Click me!");
+//        FlowPane componentGroup = new FlowPane();
+//        componentGroup.getChildren().add(textComponent);
+//        componentGroup.getChildren().add(button);
+//
+//        Scene scene = new Scene(componentGroup);
+//
+//        stage.setScene(scene);
+//        stage.show();
     }
 }
