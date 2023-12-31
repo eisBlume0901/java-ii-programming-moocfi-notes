@@ -4,9 +4,11 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 public class TestingApplication extends Application {
@@ -29,10 +31,31 @@ public class TestingApplication extends Application {
 //        primaryStage.setScene(scene);
 //        primaryStage.show();
 
+//        BorderPane layout = new BorderPane();
+//        layout.setTop(new Label("NORTH"));
+//        layout.setRight(new Label("EAST"));
+//        layout.setBottom(new Label("SOUTH"));
+//
+//        Scene scene = new Scene(layout);
+//        primaryStage.setScene(scene);
+//        primaryStage.show();
+
         BorderPane layout = new BorderPane();
-        layout.setTop(new Label("NORTH"));
-        layout.setRight(new Label("EAST"));
-        layout.setBottom(new Label("SOUTH"));
+        layout.setCenter(new TextArea(""));
+
+
+        HBox labelBar = new HBox();
+        labelBar.setSpacing(10);
+
+        Label label1 = new Label("Letters: 0");
+        Label label2 = new Label("Words: 0");
+        Label label3 = new Label("The longest word is: ");
+
+        labelBar.getChildren().add(label1);
+        labelBar.getChildren().add(label2);
+        labelBar.getChildren().add(label3);
+
+        layout.setBottom(labelBar);
 
         Scene scene = new Scene(layout);
         primaryStage.setScene(scene);
